@@ -211,8 +211,8 @@ build_project_from_chain_data()
       COMPATIBLE_VERSIONS="0.8.0 0.9.0 1.0.1 1.1.0"
       ;;
     osmosis)
-      SYSTEM_VER="15.0.0"
-      COMPATIBLE_VERSIONS="11.0.0 12.3.0 13.0.0-rc5 14.0.0 15.0.0"
+      SYSTEM_VER="19.2.0"
+      COMPATIBLE_VERSIONS="11.0.0 12.3.0 13.0.0-rc5 14.0.0 15.0.0 15.2.0 16.1.0 16.1.2 17.0.0 18.0.0 19.0.0 19.2.0"
       ;;
     cosmoshub)
       SYSTEM_VER="9.0.1"
@@ -252,7 +252,10 @@ build_project_from_chain_data()
 
     osmosis)
       case ${BUILD_VERSION} in
-        1[4-9].* )
+        1[6-9].* )      
+          export GO_VER="1.20.8"
+          ;;
+        1[4-5].* )
           export GO_VER="1.19.6"
           ;;
 

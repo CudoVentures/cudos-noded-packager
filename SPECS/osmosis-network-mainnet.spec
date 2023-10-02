@@ -33,6 +33,13 @@ Requires:     osmosisd
 Requires:     osmosisd-v12.3.0
 Requires:     osmosisd-v14.0.0
 Requires:     osmosisd-v15.0.0
+Requires:     osmosisd-v15.2.0
+Requires:     osmosisd-v16.1.0
+Requires:     osmosisd-v16.1.2
+Requires:     osmosisd-v17.0.0
+Requires:     osmosisd-v18.0.0
+Requires:     osmosisd-v19.0.0
+Requires:     osmosisd-v19.2.0
 Requires:     cudos-p2p-scan
 Requires:     cudos-gex
 
@@ -54,6 +61,11 @@ mkdir -p ${RPM_BUILD_ROOT}/etc/default/cosmovisor@osmosis
 mkdir -p ${RPM_BUILD_ROOT}/var/lib/osmosis/.osmosisd/config
 mkdir -p ${RPM_BUILD_ROOT}/var/lib/osmosis/.osmosisd/cosmovisor/upgrades/v12
 mkdir -p ${RPM_BUILD_ROOT}/var/lib/osmosis/.osmosisd/cosmovisor/upgrades/v14
+mkdir -p ${RPM_BUILD_ROOT}/var/lib/osmosis/.osmosisd/cosmovisor/upgrades/v15
+mkdir -p ${RPM_BUILD_ROOT}/var/lib/osmosis/.osmosisd/cosmovisor/upgrades/v16
+mkdir -p ${RPM_BUILD_ROOT}/var/lib/osmosis/.osmosisd/cosmovisor/upgrades/v17
+mkdir -p ${RPM_BUILD_ROOT}/var/lib/osmosis/.osmosisd/cosmovisor/upgrades/v18
+mkdir -p ${RPM_BUILD_ROOT}/var/lib/osmosis/.osmosisd/cosmovisor/upgrades/v19
 
 # Install the .osmosisd/config files
 cp -v ${RPM_SOURCE_DIR}/genesis.json                   ${RPM_BUILD_ROOT}/var/lib/osmosis/.osmosisd/config/
